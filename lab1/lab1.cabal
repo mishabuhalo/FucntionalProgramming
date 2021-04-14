@@ -1,0 +1,96 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2173a0f1feb165dcccf8c8fa0c1d3506e35c37e1d3c560605925bce4f35f99f2
+
+name:           lab1
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/lab1#readme>
+homepage:       https://github.com/githubuser/lab1#readme
+bug-reports:    https://github.com/githubuser/lab1/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/lab1
+
+library
+  exposed-modules:
+      AuthorsTable
+      AuthorsToResources
+      Converter
+      MySQLConnector
+      ResourcesTable
+      UserInteraction
+      UsersTable
+      UsersToResources
+  other-modules:
+      Paths_lab1
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.11 && <5
+    , binary >=0.8.7.0
+    , bytestring >=0.10.10.0
+    , haskeline >=0.8.1.1
+    , io-streams >=1.5.2.0
+    , mysql-haskell >=0.8.4.3
+    , pretty >=1.1.3.6
+    , text >=1.2.4.0
+    , time >=1.9.3
+    , utf8-string >=1.0.2
+  default-language: Haskell2010
+
+executable lab1-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_lab1
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.11 && <5
+    , binary >=0.8.7.0
+    , bytestring >=0.10.10.0
+    , haskeline >=0.8.1.1
+    , io-streams >=1.5.2.0
+    , lab1
+    , mysql-haskell >=0.8.4.3
+    , pretty >=1.1.3.6
+    , text >=1.2.4.0
+    , time >=1.9.3
+    , utf8-string >=1.0.2
+  default-language: Haskell2010
+
+test-suite lab1-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_lab1
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.11 && <5
+    , binary >=0.8.7.0
+    , bytestring >=0.10.10.0
+    , haskeline >=0.8.1.1
+    , io-streams >=1.5.2.0
+    , lab1
+    , mysql-haskell >=0.8.4.3
+    , pretty >=1.1.3.6
+    , text >=1.2.4.0
+    , time >=1.9.3
+    , utf8-string >=1.0.2
+  default-language: Haskell2010
